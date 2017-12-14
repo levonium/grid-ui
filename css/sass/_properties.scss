@@ -1,0 +1,78 @@
+@mixin grid_properties {
+
+  // use to remove the default 1em bottom margin
+  &.no-margin {
+    margin-bottom: 0;
+  }
+
+  // grid gaps
+  &.no-gap {
+    grid-gap: 0;
+  }
+  &.big-gap {
+    grid-gap: $grid_gap__big;
+  }
+  &.default-gap {
+    grid-gap: $grid_gap__default;
+  }
+
+  // column borders
+  &.bordered {
+    .column {
+      border: 1px solid $color__cell_border;
+    }
+  }
+  &.no-border {
+    .column {
+      border: 0 none;
+    }
+  }
+
+  // column horizontal and vertical positioning
+  $dirs: justify align;
+  $poss: start center end stretch;
+  @each $dir in $dirs {
+    @each $pos in $poss {
+      &.#{$dir}-#{$pos} {
+        #{$dir}-items: $pos;
+      }
+    }
+  }
+
+  // column padding
+  &.has-padding {
+    .column {
+      padding: $cell_padding__default;
+    }
+  }
+  &.has-big-padding {
+    .column {
+      padding: $cell_padding__big;
+    }
+  }
+  &.has-no-padding {
+    .column {
+      padding: 0;
+    }
+  }
+
+  // column text alignment
+  @each $align in center right left {
+    &.text-#{$align} {
+      .column {
+        text-align: $align;
+      }
+    }
+  }
+
+  // alternating grid columns
+  &.alternate {
+    .column {
+      background-color: $color_bg__cell;
+      &:nth-child(even) {
+        background-color: $color_bg__cell_alt;
+      }
+    }
+  }
+
+}

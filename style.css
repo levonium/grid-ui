@@ -1,0 +1,163 @@
+html,
+body {
+  font-size: 1rem;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: #111;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 200px minmax( auto, 1000px );
+  padding: 0 20px;
+}
+
+.fixed-heading {
+  font-size: 1.5em;
+  margin: 0;
+}
+#intro {
+  margin-bottom: 1em;
+}
+.page-menu {
+  position: fixed;
+  top: 1.5em;
+  width: 200px;
+  padding: 0;
+  border-right: 2px solid #f1f3f0;
+  transition: all 1.5s;
+}
+.item {
+  cursor: pointer;
+}
+.sub-item {
+  cursor: pointer;
+  font-weight: 300;
+}
+.go-to {
+  display: block;
+  padding-left: .5em;
+}
+.go-to:hover {
+  background-color: #f1f3f0;
+}
+.sub-item .go-to {
+  padding-left: 1em;
+}
+.button {
+  display: block;
+  width: 120px;
+  margin-left: .5em;
+  margin-top: .5em;
+  padding: 4px 4px 4px 12px;
+  /*background-color: #1975bf;*/
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  transition: all ease-in 1s;
+}
+.button.ybg {
+  background-color: #f9dc5c;
+}
+.button.gbg {
+  background-color: #2ec4b6;
+}
+.button:hover {
+  background-color: rgba(0,0,0,.4);
+}
+.button svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+.content-wrapper {
+  padding-top: 1.5em;
+}
+
+p {
+  line-height: 1.25em;
+  margin: 0 0 1.025em;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.empty .column {
+  min-height: 1.5em;
+}
+
+.separator {
+  background-color: #c5c5c5;
+  border-color: #c5c5c5;
+  border-style: solid;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  min-height: 3px;
+}
+
+.example {
+  position: relative;
+  margin-bottom: 2em;
+}
+.example p {
+  margin-bottom: .25em;
+}
+.example.highlight-col .row .column {
+  background-color: #f1f1f1;
+}
+.make-active {
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  line-height: 2em;
+}
+@media screen and (max-width: 900px) {
+  .make-active {
+    top: 0;
+  }
+}
+pre {
+  background-color: #f5f5ff;
+}
+.code {
+  display: none; 
+  margin-bottom: 3em;
+  color: #5c5c5c;
+}
+.code.active {
+  display: block;
+}
+code {
+  background: #f1f3f0;
+  border: 1px solid #c1c1c1;
+  padding: 0 .25em;
+}
+.code code {
+  color: #6e6f77;
+  background-color: transparent;
+  border: 0 none;
+  padding: .25em 1em;
+}
+span.attr {
+  color: #0F74BD;
+}
+span.value {
+  color: #E64320;
+}
+span.comment {
+  color: #b3b3b7;
+}

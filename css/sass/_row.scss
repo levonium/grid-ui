@@ -1,0 +1,38 @@
+$numbers: one two three four five six seven eight nine ten eleven twelve;
+$column-numbers: ( one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, );
+
+.row {
+  display: grid;
+  grid-gap: $grid_gap__default;
+  margin-bottom: $grid_margin__bottom;
+
+  @include grid_properties;
+
+  @each $number in $numbers {
+    @if $number == one {
+      &.#{$number}-column {
+        grid-template-columns: #{map-get($column-numbers, $number)}fr;
+      } 
+    } @else {
+      &.#{$number}-columns {
+        grid-template-columns: repeat( #{map-get($column-numbers, $number)}, 1fr );
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width__sm) {
+  .row {
+    @each $number in $numbers {
+      @if $number == one {
+        &.#{$number}-column {
+          grid-template-columns: 1fr;
+        }
+      } @else {
+        &.#{$number}-columns {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

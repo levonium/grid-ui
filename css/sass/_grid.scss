@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  grid-gap: $grid_gap__default;
+  grid-template-columns: repeat(12, 1fr );
+  margin-bottom: $grid_margin__bottom;
+
+  @include grid_properties;
+  
+}
