@@ -1,0 +1,18 @@
+.grid > .cell {
+	@each $number in $numbers {
+		&.#{$number} {
+			grid-column: span map-get($column-numbers, $number);
+		}
+	}
+}
+
+@media screen and (max-width: $width__sm) {
+	.grid > .cell {
+		@each $number in $numbers {
+			&.#{$number} {
+				grid-column: span 12;
+			}
+		}
+	}
+}
+

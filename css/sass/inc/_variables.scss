@@ -1,0 +1,77 @@
+// defaults 
+$default__size: 1em;
+
+$grid_gap__default: $default__size;
+$grid_margin__bottom: $default__size;
+
+// cell background colors for alternating grids
+$color_bg__cell: #f1f3f0;
+$color_bg__cell_alt: #bdc3be;
+
+// screen breakpoints
+$width__sm: 900px;
+
+// sizes
+$small__size: $default__size * 0.5;
+$medium__size: $default__size * 1.5;
+$big__size: $default__size * 2;
+$custom__size: $default__size * 0.2;
+
+$sizes: default small medium big custom;
+$size_values: (
+	'small': $small__size,
+	'medium': $medium__size,
+	'big': $big__size,
+	'custom': $custom__size
+	);
+
+
+// cell numbers
+$numbers: one two three four five six seven eight nine ten eleven twelve;
+$column-numbers: ( 
+	'one': 1,
+	'two': 2,
+	'three': 3,
+	'four': 4,
+	'five': 5,
+	'six': 6,
+	'seven': 7,
+	'eight': 8,
+	'nine': 9,
+	'ten': 10,
+	'eleven': 11,
+	'twelve': 12
+	);
+
+// colors
+$primary__color: #00aa8d;
+$info__color: #00a9f4;
+$warning__color: #ffee58;
+$danger__color: #f42a29;
+$secondary__color: #ff5622;
+$neutral__color: #f2f2f2;
+$color_names: 'red' 'pink' 'orange' 'yellow' 'purple' 'green' 'lightgreen' 'lime' 'teal' 'blue' 'navi' 'steelblue' 'white' 'grey' 'silver' 'black' 'primary' 'info' 'warning' 'danger' 'secondary' 'neutral';
+$color_values: (
+	'red': #f00,
+	'purple': #800080,
+	'pink': #ffc0cb,
+	'yellow': #ff0,
+	'orange': #ffa500,
+	'green': #080,
+	'lightgreen': #90ee90,
+	'lime': #0f0,
+	'teal': #008080,
+	'blue': #00f,
+	'navi': #008,
+	'steelblue': #4682b4,
+	'grey': #808080,
+	'silver': #c0c0c0,
+	'white': #fff,
+	'black': #000,
+	'primary': $primary__color,
+	'secondary': $secondary__color,
+	'info': $info__color,
+	'warning': $warning__color,
+	'danger': $danger__color,
+	'neutral': $neutral__color,
+	);

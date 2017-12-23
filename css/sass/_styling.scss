@@ -1,0 +1,41 @@
+.grid,
+.row {
+
+	// ***** Grid Properties *****
+	@include grid_gaps;
+	@include grid_vertical_alignments;
+	@include grid_horizontal_alignments;
+
+	// ***** Grid Styling ********
+	@include grid_padding;
+	@include grid_cell_padding;
+	@include grid_borders;
+	@include grid_cell_borders;
+	@include grid_margins;
+	@include text_alignments;
+
+	// ***** alternating grid cells ********
+	&.alternate {
+		> .cell {
+			background-color: $color_bg__cell;
+			&:nth-child(even) {
+				background-color: $color_bg__cell_alt;
+			}
+		}
+	}
+
+	> .cell {
+
+		@include grid_padding;
+		@include grid_margins;
+		@include grid_borders;
+
+		@include cell_vertical_alignments;
+		@include cell_horizontal_alignments;
+		@include text_alignments;
+	}
+
+}
+
+/***** COLORS *****/
+@import "inc/colors";

@@ -1,0 +1,80 @@
+// bottom and top margin
+@mixin grid_margins {
+	&.has-margin {
+		margin: $default__size;
+	}
+	@each $size in $sizes {
+		&.has-margin-#{$size} {
+			margin: map-get($size_values, $size);
+		}
+	}
+	&.no-margin {
+		margin: 0;
+	}
+}
+
+// grid and cell padding
+@mixin grid_padding {
+	&.has-padding {
+		padding: $default__size;
+	}
+	@each $size in $sizes {
+		&.has-padding-#{$size} {
+			padding: map-get($size_values, $size);
+		}
+	}
+	&.no-padding {
+		padding: 0;
+	}
+}
+@mixin grid_cell_padding {
+	&.has-cell-padding {
+		> .cell {
+			padding: $default__size;
+		}
+	}
+	@each $size in $sizes {
+		&.has-cell-padding-#{$size} {
+			> .cell {
+				padding: map-get($size_values, $size);
+			}
+		}
+	}
+	&.no-cell-padding {
+		> .cell {
+			padding: 0;
+		}
+	}
+}
+
+// grid and cell borders
+@mixin grid_borders {
+	&.has-border {
+		border: 1px solid;
+	}
+	&.no-border {
+		border: 0 none;
+	}
+}
+@mixin grid_cell_borders {
+	&.has-cell-border {
+		> .cell {
+			border: 1px solid;
+		}
+	}
+	&.no-cell-border {
+		> .cell {
+			border: 0 none;
+		}
+	}
+}
+
+
+// text alignment
+@mixin text_alignments {
+	@each $text_position in left right center {
+		&.has-text-#{$text_position} {
+			text-align: #{$text_position};
+		}
+	}
+}

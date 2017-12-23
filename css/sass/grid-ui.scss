@@ -1,13 +1,16 @@
 /**
  * Drim Grid UI
+ * Simple Grid Layouts Library based on CSS Grid
+ *
  * https://github.com/levonium/grid-ui
  *
- * Version 1.0
+ * Version 1.1
  *
  */
 
-@import "variables";
-@import "properties";
+@import "inc/variables";
+@import "inc/properties";
+@import "inc/styles";
 
 
 /*****************************
@@ -20,7 +23,7 @@
 ******* COLUMNS **************
 *****************************/
 
-@import "column";
+@import "cell";
 
 /*****************************
 ******* ROWS *****************
@@ -28,8 +31,8 @@
 
 @import "row";
 
-
 /*****************************
-******* COLORS ***************
+******* PROPERTIES ***********
 *****************************/
-@import "colors";
+
+@import "styling";

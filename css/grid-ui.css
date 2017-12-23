@@ -1,8 +1,10 @@
 /**
  * Drim Grid UI
+ * Simple Grid Layouts Library based on CSS Grid
+ *
  * https://github.com/levonium/grid-ui
  *
- * Version 1.0
+ * Version 1.1
  *
  */
 /*****************************
@@ -15,191 +17,103 @@
     margin-bottom: 1em;
 }
 
-.grid.no-margin {
-    margin-bottom: 0;
-}
-
-.grid.no-gap {
-    grid-gap: 0;
-}
-
-.grid.big-gap {
-    grid-gap: 2em;
-}
-
-.grid.default-gap {
-    grid-gap: 1em;
-}
-
-.grid.bordered .column {
-    border: 1px solid #c1c1c1;
-}
-
-.grid.no-border .column {
-    border: 0 none;
-}
-
-.grid.justify-start {
-    justify-items: start;
-}
-
-.grid.justify-center {
-    justify-items: center;
-}
-
-.grid.justify-end {
-    justify-items: end;
-}
-
-.grid.justify-stretch {
-    justify-items: stretch;
-}
-
-.grid.align-start {
-    align-items: start;
-}
-
-.grid.align-center {
-    align-items: center;
-}
-
-.grid.align-end {
-    align-items: end;
-}
-
-.grid.align-stretch {
-    align-items: stretch;
-}
-
-.grid.has-padding .column {
-    padding: 1em;
-}
-
-.grid.has-big-padding .column {
-    padding: 2em;
-}
-
-.grid.has-no-padding .column {
-    padding: 0;
-}
-
-.grid.text-center .column {
-    text-align: center;
-}
-
-.grid.text-right .column {
-    text-align: right;
-}
-
-.grid.text-left .column {
-    text-align: left;
-}
-
-.grid.alternate .column {
-    background-color: #f1f3f0;
-}
-
-.grid.alternate .column:nth-child(even) {
-    background-color: #bdc3be;
-}
-
 /*****************************
 ******* COLUMNS **************
 *****************************/
-.grid .column.one {
+.grid > .cell.one {
     grid-column: span 1;
 }
 
-.grid .column.two {
+.grid > .cell.two {
     grid-column: span 2;
 }
 
-.grid .column.three {
+.grid > .cell.three {
     grid-column: span 3;
 }
 
-.grid .column.four {
+.grid > .cell.four {
     grid-column: span 4;
 }
 
-.grid .column.five {
+.grid > .cell.five {
     grid-column: span 5;
 }
 
-.grid .column.six {
+.grid > .cell.six {
     grid-column: span 6;
 }
 
-.grid .column.seven {
+.grid > .cell.seven {
     grid-column: span 7;
 }
 
-.grid .column.eight {
+.grid > .cell.eight {
     grid-column: span 8;
 }
 
-.grid .column.nine {
+.grid > .cell.nine {
     grid-column: span 9;
 }
 
-.grid .column.ten {
+.grid > .cell.ten {
     grid-column: span 10;
 }
 
-.grid .column.eleven {
+.grid > .cell.eleven {
     grid-column: span 11;
 }
 
-.grid .column.twelve {
+.grid > .cell.twelve {
     grid-column: span 12;
 }
 
 @media screen and (max-width: 900px) {
-    .grid .column.one {
+    .grid > .cell.one {
         grid-column: span 12;
     }
 
-    .grid .column.two {
+    .grid > .cell.two {
         grid-column: span 12;
     }
 
-    .grid .column.three {
+    .grid > .cell.three {
         grid-column: span 12;
     }
 
-    .grid .column.four {
+    .grid > .cell.four {
         grid-column: span 12;
     }
 
-    .grid .column.five {
+    .grid > .cell.five {
         grid-column: span 12;
     }
 
-    .grid .column.six {
+    .grid > .cell.six {
         grid-column: span 12;
     }
 
-    .grid .column.seven {
+    .grid > .cell.seven {
         grid-column: span 12;
     }
 
-    .grid .column.eight {
+    .grid > .cell.eight {
         grid-column: span 12;
     }
 
-    .grid .column.nine {
+    .grid > .cell.nine {
         grid-column: span 12;
     }
 
-    .grid .column.ten {
+    .grid > .cell.ten {
         grid-column: span 12;
     }
 
-    .grid .column.eleven {
+    .grid > .cell.eleven {
         grid-column: span 12;
     }
 
-    .grid .column.twelve {
+    .grid > .cell.twelve {
         grid-column: span 12;
     }
 }
@@ -212,465 +126,985 @@
     margin-bottom: 1em;
 }
 
-.row.no-margin {
-    margin-bottom: 0;
-}
-
-.row.no-gap {
-    grid-gap: 0;
-}
-
-.row.big-gap {
-    grid-gap: 2em;
-}
-
-.row.default-gap {
-    grid-gap: 1em;
-}
-
-.row.bordered .column {
-    border: 1px solid #c1c1c1;
-}
-
-.row.no-border .column {
-    border: 0 none;
-}
-
-.row.justify-start {
-    justify-items: start;
-}
-
-.row.justify-center {
-    justify-items: center;
-}
-
-.row.justify-end {
-    justify-items: end;
-}
-
-.row.justify-stretch {
-    justify-items: stretch;
-}
-
-.row.align-start {
-    align-items: start;
-}
-
-.row.align-center {
-    align-items: center;
-}
-
-.row.align-end {
-    align-items: end;
-}
-
-.row.align-stretch {
-    align-items: stretch;
-}
-
-.row.has-padding .column {
-    padding: 1em;
-}
-
-.row.has-big-padding .column {
-    padding: 2em;
-}
-
-.row.has-no-padding .column {
-    padding: 0;
-}
-
-.row.text-center .column {
-    text-align: center;
-}
-
-.row.text-right .column {
-    text-align: right;
-}
-
-.row.text-left .column {
-    text-align: left;
-}
-
-.row.alternate .column {
-    background-color: #f1f3f0;
-}
-
-.row.alternate .column:nth-child(even) {
-    background-color: #bdc3be;
-}
-
-.row.one-column {
+.row.one-cell {
     grid-template-columns: 1fr;
 }
 
-.row.two-columns {
+.row.two-cells {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.row.three-columns {
+.row.three-cells {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.row.four-columns {
+.row.four-cells {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.row.five-columns {
+.row.five-cells {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.row.six-columns {
+.row.six-cells {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.row.seven-columns {
+.row.seven-cells {
     grid-template-columns: repeat(7, 1fr);
 }
 
-.row.eight-columns {
+.row.eight-cells {
     grid-template-columns: repeat(8, 1fr);
 }
 
-.row.nine-columns {
+.row.nine-cells {
     grid-template-columns: repeat(9, 1fr);
 }
 
-.row.ten-columns {
+.row.ten-cells {
     grid-template-columns: repeat(10, 1fr);
 }
 
-.row.eleven-columns {
+.row.eleven-cells {
     grid-template-columns: repeat(11, 1fr);
 }
 
-.row.twelve-columns {
+.row.twelve-cells {
     grid-template-columns: repeat(12, 1fr);
 }
 
 @media screen and (max-width: 900px) {
-    .row.one-column {
+    .row.one-cell {
         grid-template-columns: 1fr;
     }
 
-    .row.two-columns {
+    .row.two-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.three-columns {
+    .row.three-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.four-columns {
+    .row.four-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.five-columns {
+    .row.five-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.six-columns {
+    .row.six-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.seven-columns {
+    .row.seven-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.eight-columns {
+    .row.eight-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.nine-columns {
+    .row.nine-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.ten-columns {
+    .row.ten-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.eleven-columns {
+    .row.eleven-cells {
         grid-template-columns: 1fr;
     }
 
-    .row.twelve-columns {
+    .row.twelve-cells {
         grid-template-columns: 1fr;
     }
 }
 /*****************************
-******* COLORS ***************
+******* PROPERTIES ***********
 *****************************/
-.text-red {
+.grid.has-gap,
+.row.has-gap {
+    grid-gap: 1em;
+}
+
+.grid.has-gap-small,
+.row.has-gap-small {
+    grid-gap: 0.5em;
+}
+
+.grid.has-gap-medium,
+.row.has-gap-medium {
+    grid-gap: 1.5em;
+}
+
+.grid.has-gap-big,
+.row.has-gap-big {
+    grid-gap: 2em;
+}
+
+.grid.has-gap-custom,
+.row.has-gap-custom {
+    grid-gap: 0.2em;
+}
+
+.grid.no-gap,
+.row.no-gap {
+    grid-gap: 0;
+}
+
+.grid.is-aligned-top,
+.row.is-aligned-top {
+    align-items: start;
+}
+
+.grid.is-aligned-bottom,
+.row.is-aligned-bottom {
+    align-items: end;
+}
+
+.grid.is-aligned-center,
+.row.is-aligned-center {
+    align-items: center;
+}
+
+.grid.is-aligned-stretch,
+.row.is-aligned-stretch {
+    align-items: stretch;
+}
+
+.grid.is-justified-left,
+.row.is-justified-left {
+    justify-items: start;
+}
+
+.grid.is-justified-right,
+.row.is-justified-right {
+    justify-items: end;
+}
+
+.grid.is-justified-center,
+.row.is-justified-center {
+    justify-items: center;
+}
+
+.grid.is-justified-stretch,
+.row.is-justified-stretch {
+    justify-items: stretch;
+}
+
+.grid.has-padding,
+.row.has-padding {
+    padding: 1em;
+}
+
+.grid.has-padding-small,
+.row.has-padding-small {
+    padding: 0.5em;
+}
+
+.grid.has-padding-medium,
+.row.has-padding-medium {
+    padding: 1.5em;
+}
+
+.grid.has-padding-big,
+.row.has-padding-big {
+    padding: 2em;
+}
+
+.grid.has-padding-custom,
+.row.has-padding-custom {
+    padding: 0.2em;
+}
+
+.grid.no-padding,
+.row.no-padding {
+    padding: 0;
+}
+
+.grid.has-cell-padding > .cell,
+.row.has-cell-padding > .cell {
+    padding: 1em;
+}
+
+.grid.has-cell-padding-small > .cell,
+.row.has-cell-padding-small > .cell {
+    padding: 0.5em;
+}
+
+.grid.has-cell-padding-medium > .cell,
+.row.has-cell-padding-medium > .cell {
+    padding: 1.5em;
+}
+
+.grid.has-cell-padding-big > .cell,
+.row.has-cell-padding-big > .cell {
+    padding: 2em;
+}
+
+.grid.has-cell-padding-custom > .cell,
+.row.has-cell-padding-custom > .cell {
+    padding: 0.2em;
+}
+
+.grid.no-cell-padding > .cell,
+.row.no-cell-padding > .cell {
+    padding: 0;
+}
+
+.grid.has-border,
+.row.has-border {
+    border: 1px solid;
+}
+
+.grid.no-border,
+.row.no-border {
+    border: 0 none;
+}
+
+.grid.has-cell-border > .cell,
+.row.has-cell-border > .cell {
+    border: 1px solid;
+}
+
+.grid.no-cell-border > .cell,
+.row.no-cell-border > .cell {
+    border: 0 none;
+}
+
+.grid.has-margin,
+.row.has-margin {
+    margin: 1em;
+}
+
+.grid.has-margin-small,
+.row.has-margin-small {
+    margin: 0.5em;
+}
+
+.grid.has-margin-medium,
+.row.has-margin-medium {
+    margin: 1.5em;
+}
+
+.grid.has-margin-big,
+.row.has-margin-big {
+    margin: 2em;
+}
+
+.grid.has-margin-custom,
+.row.has-margin-custom {
+    margin: 0.2em;
+}
+
+.grid.no-margin,
+.row.no-margin {
+    margin: 0;
+}
+
+.grid.has-text-left,
+.row.has-text-left {
+    text-align: left;
+}
+
+.grid.has-text-right,
+.row.has-text-right {
+    text-align: right;
+}
+
+.grid.has-text-center,
+.row.has-text-center {
+    text-align: center;
+}
+
+.grid.alternate > .cell,
+.row.alternate > .cell {
+    background-color: #f1f3f0;
+}
+
+.grid.alternate > .cell:nth-child(even),
+  .row.alternate > .cell:nth-child(even) {
+    background-color: #bdc3be;
+}
+
+.grid > .cell.has-padding,
+.row > .cell.has-padding {
+    padding: 1em;
+}
+
+.grid > .cell.has-padding-small,
+.row > .cell.has-padding-small {
+    padding: 0.5em;
+}
+
+.grid > .cell.has-padding-medium,
+.row > .cell.has-padding-medium {
+    padding: 1.5em;
+}
+
+.grid > .cell.has-padding-big,
+.row > .cell.has-padding-big {
+    padding: 2em;
+}
+
+.grid > .cell.has-padding-custom,
+.row > .cell.has-padding-custom {
+    padding: 0.2em;
+}
+
+.grid > .cell.no-padding,
+.row > .cell.no-padding {
+    padding: 0;
+}
+
+.grid > .cell.has-margin,
+.row > .cell.has-margin {
+    margin: 1em;
+}
+
+.grid > .cell.has-margin-small,
+.row > .cell.has-margin-small {
+    margin: 0.5em;
+}
+
+.grid > .cell.has-margin-medium,
+.row > .cell.has-margin-medium {
+    margin: 1.5em;
+}
+
+.grid > .cell.has-margin-big,
+.row > .cell.has-margin-big {
+    margin: 2em;
+}
+
+.grid > .cell.has-margin-custom,
+.row > .cell.has-margin-custom {
+    margin: 0.2em;
+}
+
+.grid > .cell.no-margin,
+.row > .cell.no-margin {
+    margin: 0;
+}
+
+.grid > .cell.has-border,
+.row > .cell.has-border {
+    border: 1px solid;
+}
+
+.grid > .cell.no-border,
+.row > .cell.no-border {
+    border: 0 none;
+}
+
+.grid > .cell.is-aligned-top,
+.row > .cell.is-aligned-top {
+    align-self: start;
+}
+
+.grid > .cell.is-aligned-bottom,
+.row > .cell.is-aligned-bottom {
+    align-self: end;
+}
+
+.grid > .cell.is-aligned-center,
+.row > .cell.is-aligned-center {
+    align-self: center;
+}
+
+.grid > .cell.is-aligned-stretch,
+.row > .cell.is-aligned-stretch {
+    align-self: stretch;
+}
+
+.grid > .cell.is-justified-left,
+.row > .cell.is-justified-left {
+    justify-self: start;
+}
+
+.grid > .cell.is-justified-right,
+.row > .cell.is-justified-right {
+    justify-self: end;
+}
+
+.grid > .cell.is-justified-center,
+.row > .cell.is-justified-center {
+    justify-self: center;
+}
+
+.grid > .cell.is-justified-stretch,
+.row > .cell.is-justified-stretch {
+    justify-self: stretch;
+}
+
+.grid > .cell.has-text-left,
+.row > .cell.has-text-left {
+    text-align: left;
+}
+
+.grid > .cell.has-text-right,
+.row > .cell.has-text-right {
+    text-align: right;
+}
+
+.grid > .cell.has-text-center,
+.row > .cell.has-text-center {
+    text-align: center;
+}
+
+/***** COLORS *****/
+.grid.has-text-red,
+.row.has-text-red,
+.cell.has-text-red {
     color: #f00;
 }
 
-.red .column {
+.grid.has-cell-bg-red .cell,
+.row.has-cell-bg-red .cell {
     background-color: #f00;
 }
 
-.grid .column.red,
-.row .column.red {
+.grid.has-bg-red,
+.row.has-bg-red,
+.grid > .cell.has-bg-red,
+.row > .cell.has-bg-red {
     background-color: #f00;
 }
 
-.text-pink {
+.grid.has-border-red,
+.row.has-border-red,
+.grid > .cell.has-border-red,
+.row > .cell.has-border-red {
+    border-color: #f00;
+}
+
+.grid.has-text-pink,
+.row.has-text-pink,
+.cell.has-text-pink {
     color: #ffc0cb;
 }
 
-.pink .column {
+.grid.has-cell-bg-pink .cell,
+.row.has-cell-bg-pink .cell {
     background-color: #ffc0cb;
 }
 
-.grid .column.pink,
-.row .column.pink {
+.grid.has-bg-pink,
+.row.has-bg-pink,
+.grid > .cell.has-bg-pink,
+.row > .cell.has-bg-pink {
     background-color: #ffc0cb;
 }
 
-.text-orange {
+.grid.has-border-pink,
+.row.has-border-pink,
+.grid > .cell.has-border-pink,
+.row > .cell.has-border-pink {
+    border-color: #ffc0cb;
+}
+
+.grid.has-text-orange,
+.row.has-text-orange,
+.cell.has-text-orange {
     color: #ffa500;
 }
 
-.orange .column {
+.grid.has-cell-bg-orange .cell,
+.row.has-cell-bg-orange .cell {
     background-color: #ffa500;
 }
 
-.grid .column.orange,
-.row .column.orange {
+.grid.has-bg-orange,
+.row.has-bg-orange,
+.grid > .cell.has-bg-orange,
+.row > .cell.has-bg-orange {
     background-color: #ffa500;
 }
 
-.text-yellow {
+.grid.has-border-orange,
+.row.has-border-orange,
+.grid > .cell.has-border-orange,
+.row > .cell.has-border-orange {
+    border-color: #ffa500;
+}
+
+.grid.has-text-yellow,
+.row.has-text-yellow,
+.cell.has-text-yellow {
     color: #ff0;
 }
 
-.yellow .column {
+.grid.has-cell-bg-yellow .cell,
+.row.has-cell-bg-yellow .cell {
     background-color: #ff0;
 }
 
-.grid .column.yellow,
-.row .column.yellow {
+.grid.has-bg-yellow,
+.row.has-bg-yellow,
+.grid > .cell.has-bg-yellow,
+.row > .cell.has-bg-yellow {
     background-color: #ff0;
 }
 
-.text-purple {
+.grid.has-border-yellow,
+.row.has-border-yellow,
+.grid > .cell.has-border-yellow,
+.row > .cell.has-border-yellow {
+    border-color: #ff0;
+}
+
+.grid.has-text-purple,
+.row.has-text-purple,
+.cell.has-text-purple {
     color: #800080;
 }
 
-.purple .column {
+.grid.has-cell-bg-purple .cell,
+.row.has-cell-bg-purple .cell {
     background-color: #800080;
 }
 
-.grid .column.purple,
-.row .column.purple {
+.grid.has-bg-purple,
+.row.has-bg-purple,
+.grid > .cell.has-bg-purple,
+.row > .cell.has-bg-purple {
     background-color: #800080;
 }
 
-.text-green {
+.grid.has-border-purple,
+.row.has-border-purple,
+.grid > .cell.has-border-purple,
+.row > .cell.has-border-purple {
+    border-color: #800080;
+}
+
+.grid.has-text-green,
+.row.has-text-green,
+.cell.has-text-green {
     color: #080;
 }
 
-.green .column {
+.grid.has-cell-bg-green .cell,
+.row.has-cell-bg-green .cell {
     background-color: #080;
 }
 
-.grid .column.green,
-.row .column.green {
+.grid.has-bg-green,
+.row.has-bg-green,
+.grid > .cell.has-bg-green,
+.row > .cell.has-bg-green {
     background-color: #080;
 }
 
-.text-lightgreen {
+.grid.has-border-green,
+.row.has-border-green,
+.grid > .cell.has-border-green,
+.row > .cell.has-border-green {
+    border-color: #080;
+}
+
+.grid.has-text-lightgreen,
+.row.has-text-lightgreen,
+.cell.has-text-lightgreen {
     color: #90ee90;
 }
 
-.lightgreen .column {
+.grid.has-cell-bg-lightgreen .cell,
+.row.has-cell-bg-lightgreen .cell {
     background-color: #90ee90;
 }
 
-.grid .column.lightgreen,
-.row .column.lightgreen {
+.grid.has-bg-lightgreen,
+.row.has-bg-lightgreen,
+.grid > .cell.has-bg-lightgreen,
+.row > .cell.has-bg-lightgreen {
     background-color: #90ee90;
 }
 
-.text-lime {
+.grid.has-border-lightgreen,
+.row.has-border-lightgreen,
+.grid > .cell.has-border-lightgreen,
+.row > .cell.has-border-lightgreen {
+    border-color: #90ee90;
+}
+
+.grid.has-text-lime,
+.row.has-text-lime,
+.cell.has-text-lime {
     color: #0f0;
 }
 
-.lime .column {
+.grid.has-cell-bg-lime .cell,
+.row.has-cell-bg-lime .cell {
     background-color: #0f0;
 }
 
-.grid .column.lime,
-.row .column.lime {
+.grid.has-bg-lime,
+.row.has-bg-lime,
+.grid > .cell.has-bg-lime,
+.row > .cell.has-bg-lime {
     background-color: #0f0;
 }
 
-.text-teal {
+.grid.has-border-lime,
+.row.has-border-lime,
+.grid > .cell.has-border-lime,
+.row > .cell.has-border-lime {
+    border-color: #0f0;
+}
+
+.grid.has-text-teal,
+.row.has-text-teal,
+.cell.has-text-teal {
     color: #008080;
 }
 
-.teal .column {
+.grid.has-cell-bg-teal .cell,
+.row.has-cell-bg-teal .cell {
     background-color: #008080;
 }
 
-.grid .column.teal,
-.row .column.teal {
+.grid.has-bg-teal,
+.row.has-bg-teal,
+.grid > .cell.has-bg-teal,
+.row > .cell.has-bg-teal {
     background-color: #008080;
 }
 
-.text-blue {
+.grid.has-border-teal,
+.row.has-border-teal,
+.grid > .cell.has-border-teal,
+.row > .cell.has-border-teal {
+    border-color: #008080;
+}
+
+.grid.has-text-blue,
+.row.has-text-blue,
+.cell.has-text-blue {
     color: #00f;
 }
 
-.blue .column {
+.grid.has-cell-bg-blue .cell,
+.row.has-cell-bg-blue .cell {
     background-color: #00f;
 }
 
-.grid .column.blue,
-.row .column.blue {
+.grid.has-bg-blue,
+.row.has-bg-blue,
+.grid > .cell.has-bg-blue,
+.row > .cell.has-bg-blue {
     background-color: #00f;
 }
 
-.text-navi {
+.grid.has-border-blue,
+.row.has-border-blue,
+.grid > .cell.has-border-blue,
+.row > .cell.has-border-blue {
+    border-color: #00f;
+}
+
+.grid.has-text-navi,
+.row.has-text-navi,
+.cell.has-text-navi {
     color: #008;
 }
 
-.navi .column {
+.grid.has-cell-bg-navi .cell,
+.row.has-cell-bg-navi .cell {
     background-color: #008;
 }
 
-.grid .column.navi,
-.row .column.navi {
+.grid.has-bg-navi,
+.row.has-bg-navi,
+.grid > .cell.has-bg-navi,
+.row > .cell.has-bg-navi {
     background-color: #008;
 }
 
-.text-steelblue {
+.grid.has-border-navi,
+.row.has-border-navi,
+.grid > .cell.has-border-navi,
+.row > .cell.has-border-navi {
+    border-color: #008;
+}
+
+.grid.has-text-steelblue,
+.row.has-text-steelblue,
+.cell.has-text-steelblue {
     color: #4682b4;
 }
 
-.steelblue .column {
+.grid.has-cell-bg-steelblue .cell,
+.row.has-cell-bg-steelblue .cell {
     background-color: #4682b4;
 }
 
-.grid .column.steelblue,
-.row .column.steelblue {
+.grid.has-bg-steelblue,
+.row.has-bg-steelblue,
+.grid > .cell.has-bg-steelblue,
+.row > .cell.has-bg-steelblue {
     background-color: #4682b4;
 }
 
-.text-brown {
-    color: #a52a2a;
+.grid.has-border-steelblue,
+.row.has-border-steelblue,
+.grid > .cell.has-border-steelblue,
+.row > .cell.has-border-steelblue {
+    border-color: #4682b4;
 }
 
-.brown .column {
-    background-color: #a52a2a;
-}
-
-.grid .column.brown,
-.row .column.brown {
-    background-color: #a52a2a;
-}
-
-.text-maroon {
-    color: #800000;
-}
-
-.maroon .column {
-    background-color: #800000;
-}
-
-.grid .column.maroon,
-.row .column.maroon {
-    background-color: #800000;
-}
-
-.text-white {
+.grid.has-text-white,
+.row.has-text-white,
+.cell.has-text-white {
     color: #fff;
 }
 
-.white .column {
+.grid.has-cell-bg-white .cell,
+.row.has-cell-bg-white .cell {
     background-color: #fff;
 }
 
-.grid .column.white,
-.row .column.white {
+.grid.has-bg-white,
+.row.has-bg-white,
+.grid > .cell.has-bg-white,
+.row > .cell.has-bg-white {
     background-color: #fff;
 }
 
-.text-beige {
-    color: #f5f5dc;
+.grid.has-border-white,
+.row.has-border-white,
+.grid > .cell.has-border-white,
+.row > .cell.has-border-white {
+    border-color: #fff;
 }
 
-.beige .column {
-    background-color: #f5f5dc;
-}
-
-.grid .column.beige,
-.row .column.beige {
-    background-color: #f5f5dc;
-}
-
-.text-grey {
+.grid.has-text-grey,
+.row.has-text-grey,
+.cell.has-text-grey {
     color: #808080;
 }
 
-.grey .column {
+.grid.has-cell-bg-grey .cell,
+.row.has-cell-bg-grey .cell {
     background-color: #808080;
 }
 
-.grid .column.grey,
-.row .column.grey {
+.grid.has-bg-grey,
+.row.has-bg-grey,
+.grid > .cell.has-bg-grey,
+.row > .cell.has-bg-grey {
     background-color: #808080;
 }
 
-.text-silver {
+.grid.has-border-grey,
+.row.has-border-grey,
+.grid > .cell.has-border-grey,
+.row > .cell.has-border-grey {
+    border-color: #808080;
+}
+
+.grid.has-text-silver,
+.row.has-text-silver,
+.cell.has-text-silver {
     color: #c0c0c0;
 }
 
-.silver .column {
+.grid.has-cell-bg-silver .cell,
+.row.has-cell-bg-silver .cell {
     background-color: #c0c0c0;
 }
 
-.grid .column.silver,
-.row .column.silver {
+.grid.has-bg-silver,
+.row.has-bg-silver,
+.grid > .cell.has-bg-silver,
+.row > .cell.has-bg-silver {
     background-color: #c0c0c0;
 }
 
-.text-azure {
-    color: #f0ffff;
+.grid.has-border-silver,
+.row.has-border-silver,
+.grid > .cell.has-border-silver,
+.row > .cell.has-border-silver {
+    border-color: #c0c0c0;
 }
 
-.azure .column {
-    background-color: #f0ffff;
-}
-
-.grid .column.azure,
-.row .column.azure {
-    background-color: #f0ffff;
-}
-
-.text-bisque {
-    color: #ffe4c4;
-}
-
-.bisque .column {
-    background-color: #ffe4c4;
-}
-
-.grid .column.bisque,
-.row .column.bisque {
-    background-color: #ffe4c4;
-}
-
-.text-black {
+.grid.has-text-black,
+.row.has-text-black,
+.cell.has-text-black {
     color: #000;
 }
 
-.black .column {
+.grid.has-cell-bg-black .cell,
+.row.has-cell-bg-black .cell {
     background-color: #000;
 }
 
-.grid .column.black,
-.row .column.black {
+.grid.has-bg-black,
+.row.has-bg-black,
+.grid > .cell.has-bg-black,
+.row > .cell.has-bg-black {
     background-color: #000;
+}
+
+.grid.has-border-black,
+.row.has-border-black,
+.grid > .cell.has-border-black,
+.row > .cell.has-border-black {
+    border-color: #000;
+}
+
+.grid.has-text-primary,
+.row.has-text-primary,
+.cell.has-text-primary {
+    color: #00aa8d;
+}
+
+.grid.has-cell-bg-primary .cell,
+.row.has-cell-bg-primary .cell {
+    background-color: #00aa8d;
+}
+
+.grid.has-bg-primary,
+.row.has-bg-primary,
+.grid > .cell.has-bg-primary,
+.row > .cell.has-bg-primary {
+    background-color: #00aa8d;
+}
+
+.grid.has-border-primary,
+.row.has-border-primary,
+.grid > .cell.has-border-primary,
+.row > .cell.has-border-primary {
+    border-color: #00aa8d;
+}
+
+.grid.has-text-info,
+.row.has-text-info,
+.cell.has-text-info {
+    color: #00a9f4;
+}
+
+.grid.has-cell-bg-info .cell,
+.row.has-cell-bg-info .cell {
+    background-color: #00a9f4;
+}
+
+.grid.has-bg-info,
+.row.has-bg-info,
+.grid > .cell.has-bg-info,
+.row > .cell.has-bg-info {
+    background-color: #00a9f4;
+}
+
+.grid.has-border-info,
+.row.has-border-info,
+.grid > .cell.has-border-info,
+.row > .cell.has-border-info {
+    border-color: #00a9f4;
+}
+
+.grid.has-text-warning,
+.row.has-text-warning,
+.cell.has-text-warning {
+    color: #ffee58;
+}
+
+.grid.has-cell-bg-warning .cell,
+.row.has-cell-bg-warning .cell {
+    background-color: #ffee58;
+}
+
+.grid.has-bg-warning,
+.row.has-bg-warning,
+.grid > .cell.has-bg-warning,
+.row > .cell.has-bg-warning {
+    background-color: #ffee58;
+}
+
+.grid.has-border-warning,
+.row.has-border-warning,
+.grid > .cell.has-border-warning,
+.row > .cell.has-border-warning {
+    border-color: #ffee58;
+}
+
+.grid.has-text-danger,
+.row.has-text-danger,
+.cell.has-text-danger {
+    color: #f42a29;
+}
+
+.grid.has-cell-bg-danger .cell,
+.row.has-cell-bg-danger .cell {
+    background-color: #f42a29;
+}
+
+.grid.has-bg-danger,
+.row.has-bg-danger,
+.grid > .cell.has-bg-danger,
+.row > .cell.has-bg-danger {
+    background-color: #f42a29;
+}
+
+.grid.has-border-danger,
+.row.has-border-danger,
+.grid > .cell.has-border-danger,
+.row > .cell.has-border-danger {
+    border-color: #f42a29;
+}
+
+.grid.has-text-secondary,
+.row.has-text-secondary,
+.cell.has-text-secondary {
+    color: #ff5622;
+}
+
+.grid.has-cell-bg-secondary .cell,
+.row.has-cell-bg-secondary .cell {
+    background-color: #ff5622;
+}
+
+.grid.has-bg-secondary,
+.row.has-bg-secondary,
+.grid > .cell.has-bg-secondary,
+.row > .cell.has-bg-secondary {
+    background-color: #ff5622;
+}
+
+.grid.has-border-secondary,
+.row.has-border-secondary,
+.grid > .cell.has-border-secondary,
+.row > .cell.has-border-secondary {
+    border-color: #ff5622;
+}
+
+.grid.has-text-neutral,
+.row.has-text-neutral,
+.cell.has-text-neutral {
+    color: #f2f2f2;
+}
+
+.grid.has-cell-bg-neutral .cell,
+.row.has-cell-bg-neutral .cell {
+    background-color: #f2f2f2;
+}
+
+.grid.has-bg-neutral,
+.row.has-bg-neutral,
+.grid > .cell.has-bg-neutral,
+.row > .cell.has-bg-neutral {
+    background-color: #f2f2f2;
+}
+
+.grid.has-border-neutral,
+.row.has-border-neutral,
+.grid > .cell.has-border-neutral,
+.row > .cell.has-border-neutral {
+    border-color: #f2f2f2;
 }
 
 /*# sourceMappingURL=grid-ui.css.map */

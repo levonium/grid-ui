@@ -1,0 +1,62 @@
+// grid gaps
+@mixin grid_gaps {
+	&.has-gap {
+		grid-gap: $default__size;
+	}
+	@each $size in $sizes {
+		&.has-gap-#{$size} {
+			grid-gap: map-get($size_values, $size);
+		}
+	}
+	&.no-gap {
+		grid-gap: 0;
+	}
+}
+
+
+// cells vertical positioning
+$vertical_positions: top bottom center stretch;
+$vertical_alignments: (
+	'top': start,
+	'center': center,
+	'bottom': end,
+	'stretch': stretch
+	);
+@mixin grid_vertical_alignments {
+	@each $vertical_position in $vertical_positions {
+		&.is-aligned-#{$vertical_position} {
+			align-items: map-get($vertical_alignments, $vertical_position);
+		}
+	}
+}
+@mixin cell_vertical_alignments {
+	@each $vertical_position in $vertical_positions {
+		&.is-aligned-#{$vertical_position} {
+			align-self: map-get($vertical_alignments, $vertical_position);
+		}
+	}
+}
+
+
+// cells horizontal positioning
+$horizontal_positions: left right center stretch;
+$horizontal_alignments: (
+	'left': start,
+	'center': center,
+	'right': end,
+	'stretch': stretch
+	);
+@mixin grid_horizontal_alignments {
+	@each $horizontal_position in $horizontal_positions {
+		&.is-justified-#{$horizontal_position} {
+			justify-items: map-get($horizontal_alignments, $horizontal_position);
+		}
+	}
+}
+@mixin cell_horizontal_alignments {
+	@each $horizontal_position in $horizontal_positions {
+		&.is-justified-#{$horizontal_position} {
+			justify-self: map-get($horizontal_alignments, $horizontal_position);
+		}
+	}
+}

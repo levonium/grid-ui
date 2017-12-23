@@ -1,0 +1,42 @@
+@each $color_name in $color_names {
+
+	// text color
+	.grid,
+	.row,
+	.cell {
+		&.has-text-#{$color_name} {
+			color: map-get($color_values, $color_name);
+		}
+	}
+
+	// cell background color
+	.grid,
+	.row {
+		&.has-cell-bg-#{$color_name} {
+			.cell {
+				background-color: map-get($color_values, $color_name);
+			}
+		}
+	}
+
+	// background color
+	.grid,
+	.row,
+	.grid > .cell,
+	.row > .cell {
+		&.has-bg-#{$color_name} {
+			background-color: map-get($color_values, $color_name);
+		}
+	}
+
+	// border color
+	.grid,
+	.row,
+	.grid > .cell,
+	.row > .cell {
+		&.has-border-#{$color_name} {
+			border-color: map-get($color_values, $color_name);
+		}
+	}
+
+}
